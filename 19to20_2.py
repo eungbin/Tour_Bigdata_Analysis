@@ -53,8 +53,6 @@ for remove_2019 in remove_list_2019:
 for remove_2020 in remove_list_2020:
     read_data_2020 = my_lib.remove_data(read_data_2020, remove_q_code, remove_2020)
 
-print(read_data_2020[remove_q_code])
-
 # 각 연령별로 분류된 DataFrame List
 list_df_2019 = my_lib.split_df_of_age(read_data_2019)
 list_df_2020 = my_lib.split_df_of_age(read_data_2020)
@@ -66,5 +64,7 @@ list_sub = []
 
 for data2019, data2020 in zip(list_df_2019, list_df_2020):
     list_sub.append(my_lib.sub20_19(data2019, data2020, 'q2_1_n2'))
+
+print(list_sub)
 
 draw_piechart(list_sub)

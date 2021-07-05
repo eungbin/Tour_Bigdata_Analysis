@@ -86,3 +86,9 @@ def split_df_of_age(df):
     list_df.append(df_age_70)
 
     return list_df
+
+def Q3(list_df):
+    return_list = []
+    for df in list_df:
+        return_list.append(df['q3'].value_counts(normalize=False, sort=True, ascending=False, dropna=True).head(5))
+    return return_list
