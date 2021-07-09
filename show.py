@@ -15,8 +15,6 @@ column_list = [] # columns name list
 code_list_q1_A = ['q1_A', 'q1_A_m2', 'q1_A_m3', 'q1_A_m4', 'q1_A_m5', 'q1_A_m6', 'q1_A_m7', 'q1_A_m8', 'q1_A_m9']
 title_q1_A = ['전시회 관람', '박물관 관람', '음악연주회 관람', '전통예술공연 관람', '연극공연 관람', '무용공연 관람', '영화관람', '연예공연 관람', '보기 중 경험한 활동 없음']
 
-# data_length = read_data.__len__()
-
 # q1_A 연령별 파악
 def showData_Q1_A(df_age, q1_A_code):
     count = 0

@@ -1,4 +1,4 @@
-# Q3. 여가활동 주 목적
+# Q9. 여가활동을 위한 지출액(월 평균)
 
 import math
 import pandas as pd
@@ -18,15 +18,7 @@ read_data_2020 = pd.read_spss('./data.sav')
 list_2019_df = my_lib.split_df_of_age(read_data_2019)
 list_2020_df = my_lib.split_df_of_age(read_data_2020)
 
-# Q3 TOP 5
-q3_list_2019_top5 = my_lib.default_Q(list_2019_df, 'q3')
-q3_list_2020_top5 = my_lib.default_Q(list_2020_df, 'q3')
-# -------
+list_2019_q9 = my_lib.Q9(list_2019_df)
+list_2020_q9 = my_lib.Q9(list_2020_df)
 
-list19to20 = []
-for data2019, data2020 in zip(list_2019_df, list_2020_df):
-    list19to20.append(my_lib.sub20_19(data2019, data2020, "q3"))
-
-my_lib.drawChart_top(q3_list_2019_top5, q3_list_2020_top5)
-print(list19to20)
-my_lib.drawChart_sub(list19to20)
+my_lib.drawChart_Bar(list_2019_q9, list_2020_q9, "연령별 여가활동을 위한 지출액(월 평균)", "AGE", "단위 : (원)")
